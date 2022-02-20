@@ -1,7 +1,7 @@
 <!-- Navbar Components -->
 <?php function Navbar(){ ?>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <div class="bg-white dark:bg-gray-900 drop-shadow-lg dark:drop-shadow-none fixed min-w-full">
+    <div class="bg-white dark:bg-gray-800 drop-shadow-lg dark:drop-shadow-none fixed min-w-full">
         <div class="w-full text-gray-700 text-white">
             <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="flex flex-row items-center justify-between p-4">
@@ -40,7 +40,7 @@
             <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
                 <div class="p-2 sm:w-1/2 w-full">
                     <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-700 dark:text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                             <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="p-2 sm:w-1/2 w-full">
                     <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-700 dark:text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                             <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="p-2 sm:w-1/2 w-full">
                     <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-700 dark:text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                             <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="p-2 sm:w-1/2 w-full">
                     <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-700 dark:text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                             <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="p-2 sm:w-1/2 w-full">
                     <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-700 dark:text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                             <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="p-2 sm:w-1/2 w-full">
                     <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-700 dark:text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                             <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="p-2 sm:w-1/2 w-full">
                     <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-700 dark:text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                             <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="p-2 sm:w-1/2 w-full">
                     <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-700 dark:text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
                             <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                             <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
