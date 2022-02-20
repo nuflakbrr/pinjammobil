@@ -21,6 +21,9 @@
                     // disable button button if in login page
                     if(basename($_SERVER['PHP_SELF']) == "login.php"){
                         echo '<a href="./" class="px-4 py-2 mx-2 text-sm font-semibold bg-transparent rounded-lg dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white text-black dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">Beranda <i class="bi bi-house-fill"></i></a>';
+                    }elseif(basename($_SERVER['PHP_SELF']) == "register.php"){
+                        echo '<a href="./" class="px-4 py-2 mx-2 text-sm font-semibold bg-transparent rounded-lg dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white text-black dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">Beranda <i class="bi bi-house-fill"></i></a>';
+                        echo '<a href="./login.php" class="px-4 py-2 mx-2 text-sm font-semibold bg-transparent rounded-lg dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white text-black dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">Masuk <i class="bi bi-box-arrow-in-right"></i></a>';
                     }else{
                         echo '<a href="./login.php" class="px-4 py-2 mx-2 text-sm font-semibold bg-transparent rounded-lg dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white text-black dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">Masuk <i class="bi bi-box-arrow-in-right"></i></a>';
                     }
@@ -145,15 +148,15 @@
                                     <label for="password" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
                                 </div>
                                 <div class="relative mt-5">
-                                    <button type="submit" class="w-full bg-red-700 dark:bg-blue-700 text-white rounded-md px-2 py-1 hover:bg-red-800 dark:hover:bg-blue-800"><i class="bi bi-box-arrow-in-right"></i> Masuk</button>
+                                    <button type="submit" class="w-full bg-red-700 dark:bg-blue-700 text-white rounded-md px-2 py-1 hover:bg-red-800 dark:hover:bg-blue-800">Masuk</button>
                                 </div>
-                                
+
                                 <!-- if error -->
-                                <?php if(isset($_GET['error'])){ ?>
+                                <?php if(isset($_POST['error'])){ ?>
                                     <div class="mt-5 text-red-700 dark:text-indigo-500">
-                                        <?php if($_GET['error'] == 'wrong-password'){ ?>
+                                        <?php if($_POST['error'] == 'wrong-password'){ ?>
                                             <p>Username atau password salah!</p>
-                                        <?php }else if($_GET['error'] == 'not-found'){ ?>
+                                        <?php }else if($_POST['error'] == 'not-found'){ ?>
                                             <p>Username tidak ditemukan!</p>
                                         <?php } ?>
                                     </div>
@@ -162,6 +165,55 @@
 
                                 <div class="relative mt-5">
                                     <p class="text-center text-sm">Belum memiliki akun? <a href="./register.php" class="text-red-700 hover:text-red-800 dark:text-blue-700">Daftar Sekarang</a>!</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
+<!-- Register Components -->
+<?php function RegisPage(){ ?>
+    <div class="min-h-screen bg-white dark:bg-gray-900 py-6 flex flex-col justify-center sm:py-12">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+            <div class="absolute inset-0 bg-gradient-to-r from-red-300 to-red-600 dark:bg-gradient-to-r dark:from-blue-300 dark:to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+            <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                <div class="max-w-md mx-auto">
+                    <div>
+                        <h1 class="text-2xl font-semibold">Selamat Datang di PinjamMobil!</h1>
+                    </div>
+                    <div class="divide-y divide-gray-200">
+                        <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                            <form action="" method="post">
+                                <div class="relative">
+                                    <input autocomplete="off" id="username" name="username" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none" placeholder="Username" />
+                                    <label for="username" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Username</label>
+                                </div>
+                                <div class="relative mt-5">
+                                    <input autocomplete="off" id="password" name="password" type="password" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none" placeholder="Password" />
+                                    <label for="password" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
+                                </div>
+                                <div class="relative mt-5">
+                                    <button type="submit" class="w-full bg-red-700 dark:bg-blue-700 text-white rounded-md px-2 py-1 hover:bg-red-800 dark:hover:bg-blue-800">Daftar</button>
+                                </div>
+
+                                <!-- if error -->
+                                <?php if(isset($_POST['error'])){ ?>
+                                    <div class="mt-5 text-red-700 dark:text-indigo-500">
+                                        <?php if($_POST['error'] == 'username-exists'){ ?>
+                                            <p>Username sudah ada!</p>
+                                        <?php }else if($_POST['error'] == 'password-not-match'){ ?>
+                                            <p>Password tidak cocok!</p>
+                                        <?php } ?>
+                                    </div>
+                                <?php } ?>
+                                <!-- end if -->
+
+                                <div class="relative mt-5">
+                                    <p class="text-center text-sm">Sudah memiliki akun? <a href="./login.php" class="text-red-700 hover:text-red-800 dark:text-blue-700">Masuk Sekarang</a>!</p>
                                 </div>
                             </form>
                         </div>
