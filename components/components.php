@@ -1,7 +1,7 @@
 <!-- Navbar Components -->
 <?php function Navbar(){ ?>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <div class="bg-white dark:bg-gray-800 drop-shadow-lg dark:drop-shadow-none fixed min-w-full">
+    <div class="bg-white dark:bg-gray-900 drop-shadow-lg dark:drop-shadow-none fixed min-w-full">
         <div class="w-full text-gray-700 text-white">
             <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="flex flex-row items-center justify-between p-4">
