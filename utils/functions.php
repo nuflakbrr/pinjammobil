@@ -1,3 +1,25 @@
+<!-- SEO -->
+<?php function SEO($title, $desc){ ?>
+    <title><?php echo $title ? $title : "PinjamMobil | Naufal Akbar Nugroho" ?></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Naufal Akbar Nugroho">
+    <meta name="description" content="<?php echo $desc ? $desc : "Car Rental App with PHP Native by Naufal Akbar Nugroho" ?>">
+    <meta property="og:title" content="<?php echo $title ? $title : "PinjamMobil | Naufal Akbar Nugroho" ?>">
+    <meta property="og:description" content="<?php echo $desc ? $desc : "Car Rental App with PHP Native by Naufal Akbar Nugroho" ?>">
+    <meta property="og:image" content="/some-image.png">
+    <!-- <meta property="og:url" content="/this-page.html"> -->
+    <!-- <meta property="og:site_name" content="Your Site Name"> -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="image description">
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon-16x16.png">
+    <link rel="icon" href="./public/favicon.ico">
+    <link rel="manifest" href="./public/site.webmanifest">
+<?php } ?>
+
 <!-- TailwindCSS CDN -->
 <?php function TailwindCSS(){ ?>
     <script src="https://cdn.tailwindcss.com"></script>
