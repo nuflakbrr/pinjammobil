@@ -189,6 +189,10 @@
                         <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                             <form action="" method="post">
                                 <div class="relative">
+                                    <input autocomplete="off" id="name" name="name" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none" placeholder="Name" />
+                                    <label for="name" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Name</label>
+                                </div>
+                                <div class="relative mt-5">
                                     <input autocomplete="off" id="username" name="username" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none" placeholder="Username" />
                                     <label for="username" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Username</label>
                                 </div>
@@ -197,21 +201,18 @@
                                     <label for="password" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
                                 </div>
                                 <div class="relative mt-5">
+                                <label for="roles" class="peer h-10 w-full text-gray-600">Role</label>
+                                    <select name="roles" id="roles" class="peer placeholder-transparent h-10 w-full border-gray-300 text-gray-900 focus:outline-none">
+                                        <option  disabled selected>Choose Role</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="owner">Owner</option>
+                                        <option value="cashier">Kasir</option>
+                                    </select>
+                                </div>
+                                <div class="relative mt-5">
                                     <button type="submit" class="w-full bg-red-700 dark:bg-blue-700 text-white rounded-md px-2 py-1 hover:bg-red-800 dark:hover:bg-blue-800">Daftar</button>
                                 </div>
-
-                                <!-- if error -->
-                                <?php if(isset($_POST['error'])){ ?>
-                                    <div class="mt-5 text-red-700 dark:text-indigo-500">
-                                        <?php if($_POST['error'] == 'username-exists'){ ?>
-                                            <p>Username sudah ada!</p>
-                                        <?php }else if($_POST['error'] == 'password-not-match'){ ?>
-                                            <p>Password tidak cocok!</p>
-                                        <?php } ?>
-                                    </div>
-                                <?php } ?>
-                                <!-- end if -->
-
+                                
                                 <div class="relative mt-5">
                                     <p class="text-center text-sm">Sudah memiliki akun? <a href="./login.php" class="text-red-700 hover:text-red-800 dark:text-blue-700">Masuk Sekarang</a>!</p>
                                 </div>
