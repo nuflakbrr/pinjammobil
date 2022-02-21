@@ -1,14 +1,13 @@
 <?php
-    function Connect()
-    {
-        $dbhost = "localhost";
-        $dbuser = "root";
-        $dbpass = "";
-        $dbname = "dbrental";
+    $host = 'localhost';
+	$db = 'dbrental';
+	$user = 'root';
+	$password = '';
 
-        //Create Connection
-        $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname) or die($conn->connect_error);
+	$conn = mysqli_connect($host, $user, $password, $db);
 
-        return $conn;
-    }
+	if (mysqli_connect_errno()) {
+		echo "Failed to establish connection to database: " + mysqli_connect_error();
+		exit();
+	}
 ?>
