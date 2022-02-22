@@ -3,6 +3,26 @@
     require_once './components/components.php';
     require_once './database/connection.php';
 
+    session_start();
+
+    if(isset($_COOKIE['id']) && isset($_COOKIE['key_id'])){
+        $id = $_COOKIE['id'];
+        $key_id = $_COOKIE['key_id'];
+
+        $sql = "SELECT username FROM users WHERE id = '$id'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+
+        if($key_id === hash('sha256', $row['username'])){
+            $_SESSION['login'] = true;
+        }
+    }
+
+    if(isset($_SESSION['login'])){
+        header("Location: dashboard.php");
+        exit();
+    }
+
     if($_POST){
         $username=$_POST['username'];
         $password=$_POST['password'];
@@ -23,17 +43,24 @@
                 echo "<script>alert('Password Incorrect! Please try again.');</script>";
             } elseif($hashedPwdCheck == true){
                 // set session variables
+                $_SESSION['login'] = true;
                 $_SESSION['u_id'] = $row['id'];
                 $_SESSION['u_name'] = $row['name'];
                 $_SESSION['u_username'] = $row['username'];
                 $_SESSION['u_level'] = $row['level'];
 
+                // check remember me
+                if(isset($_POST['remember'])){
+                    setcookie('id', $row['id'], time() + 60);
+                    setcookie('key_id', hash('sha256', $row['username']), time() + 60);
+                }
+
                 // redirect user to dashboard
                 echo "<script>alert('Login Successful!');</script>";
-                echo "<script>window.location.href = 'dashboard.php';</script>";
+                header("Location: dashboard.php");
             } else {
                 echo "<script>AlertDanger('Error! Please try again.');</script>";
-                echo "<script>window.location.href = 'login.php';</script>";
+                header("Location: login.php");
             }
         }
     }
@@ -42,7 +69,7 @@
 <html lang="en">
 <head>
     <!-- SEO -->
-    <?php SEO("Masuk | PinjamMobil", ""); ?>
+    <?php SEO("Masuk | PinjamMobil"); ?>
     
     <!-- TailwindCSS -->
     <?php TailwindCSS(); ?>

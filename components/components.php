@@ -148,20 +148,12 @@
                                     <label for="password" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
                                 </div>
                                 <div class="relative mt-5">
+                                    <input type="checkbox" name="remember" id="remember">
+                                    <label for="remember" class="text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Remember Me</label>
+                                </div>
+                                <div class="relative mt-5">
                                     <button type="submit" class="w-full bg-red-700 dark:bg-blue-700 text-white rounded-md px-2 py-1 hover:bg-red-800 dark:hover:bg-blue-800">Masuk</button>
                                 </div>
-
-                                <!-- if error -->
-                                <?php if(isset($_POST['error'])){ ?>
-                                    <div class="mt-5 text-red-700 dark:text-indigo-500">
-                                        <?php if($_POST['error'] == 'wrong-password'){ ?>
-                                            <p>Username atau password salah!</p>
-                                        <?php }else if($_POST['error'] == 'not-found'){ ?>
-                                            <p>Username tidak ditemukan!</p>
-                                        <?php } ?>
-                                    </div>
-                                <?php } ?>
-                                <!-- end if -->
 
                                 <div class="relative mt-5">
                                     <p class="text-center text-sm">Belum memiliki akun? <a href="./register.php" class="text-red-700 hover:text-red-800 dark:text-blue-700">Daftar Sekarang</a>!</p>
