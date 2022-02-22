@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <!-- SEO -->
-    <?php SEO("", ""); ?>
+    <?php SEO(""); ?>
 
     <!-- TailwindCSS -->
     <?php TailwindCSS(); ?>

@@ -1,13 +1,13 @@
 <!-- SEO -->
-<?php function SEO($title, $desc){ ?>
+<?php function SEO($title){ ?>
     <title><?php echo $title ? $title : "PinjamMobil | Naufal Akbar Nugroho" ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Naufal Akbar Nugroho">
-    <meta name="description" content="<?php echo $desc ? $desc : "Car Rental App with PHP Native by Naufal Akbar Nugroho" ?>">
+    <meta name="description" content="Car Rental App with PHP Native by Naufal Akbar Nugroho">
     <meta property="og:title" content="<?php echo $title ? $title : "PinjamMobil | Naufal Akbar Nugroho" ?>">
-    <meta property="og:description" content="<?php echo $desc ? $desc : "Car Rental App with PHP Native by Naufal Akbar Nugroho" ?>">
+    <meta property="og:description" content="Car Rental App with PHP Native by Naufal Akbar Nugroho">
     <meta property="og:image" content="/some-image.png">
     <!-- <meta property="og:url" content="/this-page.html"> -->
     <!-- <meta property="og:site_name" content="Your Site Name"> -->

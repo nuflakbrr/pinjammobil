@@ -26,11 +26,11 @@
 
             if($result){
                 echo "<script>alert('User successfully registered! Please login now.');</script>";
-                echo "<script>window.location.href = 'login.php';</script>";
+                header("Location: login.php");
             } else {
-                echo "<script>alert('Error!');</script>";
+                echo "<script>alert('Error! Please try again!');</script>";
                 mysqli_error($conn);
-                echo "<script>window.location.href = 'register.php';</script>";
+                header("Location: register.php");
             }
         }
     }
@@ -39,7 +39,7 @@
 <html lang="en">
 <head>
     <!-- SEO -->
-    <?php SEO("Daftar | PinjamMobil", ""); ?>
+    <?php SEO("Daftar | PinjamMobil"); ?>
     
     <!-- TailwindCSS -->
     <?php TailwindCSS(); ?>
